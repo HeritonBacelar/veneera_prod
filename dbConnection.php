@@ -2,9 +2,10 @@
 
 $servername = "localhost";  
 $username = "root"; 
-$password = "";   
+$password = ""; 
+$dbname= "veneera";   
 
-$conn = new mysqli($servername, $username, $password);  
+$conn = new mysqli($servername, $username, $password, $dbname);  
 
 if ($conn-> connect_error) {  
 

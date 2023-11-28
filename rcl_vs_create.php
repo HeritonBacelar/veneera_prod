@@ -1,7 +1,22 @@
 <?php  
 
 //Form for veneer set issues requests 
-//The data must be displayed in the rcl_vs_read.php
+//The data must be displayed in the rcl_vs_read.php 
+if (isset($_POST['submit'])) { 
+
+    include_once('dbConnection.php'); 
+
+    $order_number=$_POST['order_number']; 
+    $issue=$_POST['issue']; 
+    $issue_date=$_POST['issue_date']; 
+    $veneer_set=$_POST['veneer_set']; 
+    $info=$_POST['info']; 
+
+    $result = mysqli_query($conn, "INSERT INTO rcl_veneer_set(order_number, issue, issue_date, veneer_set, info)  
+    VALUES ('$order_number','$issue','$issue_date','$veneer_set','$info')");
+
+}
+
 
 ?> 
 
@@ -27,11 +42,11 @@
                     <option value="Fitting">Fitting</option>  
                 </select>
             </label> 
-            <label for="date"> Date of issue:
-                <input type="date" class="date" name="date">
+            <label for="issue_date"> Date of issue:
+                <input type="date" class="issue_date" name="issue_date">
             </label>  
-            <label for="set">Veneer set: 
-                <select name="set" id="set"> 
+            <label for="veneer_set">Veneer set: 
+                <select name="veneer_set" id="veneer_set"> 
                     <option value="">--Select--</option>
                     <option value="Top">Top</option> 
                     <option value="Bottom">Bottom</option> 

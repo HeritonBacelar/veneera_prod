@@ -1,7 +1,22 @@
 <?php  
 
 //Form for impression set issues requests 
-//The data must be displayed in the rcl_is_read.php
+//The data must be displayed in the rcl_is_read.php  
+
+if (isset($_POST['submit'])) { 
+
+    include_once('dbConnection.php'); 
+
+    $order_number=$_POST['order_number']; 
+    $as_df=$_POST['as_df']; 
+    $attempts=$_POST['attempts']; 
+    $reason=$_POST['reason']; 
+    $info=$_POST['info']; 
+
+    $result = mysqli_query($conn, "INSERT INTO rcl_impression_set(order_number, as_df, attempts, reason, info)  
+    VALUES ('$order_number','$as_df','$attempts','$reason','$info')");
+
+}
 
 ?>
 
