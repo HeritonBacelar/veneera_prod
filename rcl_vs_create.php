@@ -18,19 +18,20 @@ if (isset($_POST['submit'])) {
 }
 
 
+?>  
+
+<?php  
+
+include('layout.php');
+
 ?> 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body> 
+
+<main> 
+    <section> 
+    <h2>Create Veneer set reclamations</h2>      
     <form action="rcl_vs_create.php" method="post">  
-        <fieldset> 
+        
             <label for="order_number"> Order Number:
                 <input id="order_number" type="text" name="order_number"> 
             </label> 
@@ -58,11 +59,10 @@ if (isset($_POST['submit'])) {
                 <textarea name="info" id="info" cols="33" rows="5"></textarea>
             </label> 
             
-        </fieldset> 
+        
         <input type="submit" name="submit" id="submit" class="send" value="Send">
     </form> 
 
-    <p>teste</p>
-    
-</body>
-</html>
+    </section> 
+
+</main>

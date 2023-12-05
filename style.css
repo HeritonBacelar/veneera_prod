@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Roboto&family=Rubik&display=swap');
+
 
 body { 
 
-    font-family: "Josefin Sans", sans-serif; 
-    background-color: aquamarine; 
+    font-family: 'Roboto', sans-serif; 
+    background-color: white; 
     margin: 0;
 }
 
-form {  
+form, .teste {  
     margin: 0 auto; 
     width: 400px; 
     padding: 5em;
@@ -44,11 +46,12 @@ select {
 } 
 
 fieldset{ 
-    background-color: azure; 
+   
+    background-color: whitesmoke; 
     border-radius: 5px; 
     align-items: center; 
     padding: 2em; 
-    box-shadow: 10px 5px 5px grey; 
+    box-shadow: 1px 1px 1px 1px grey; 
     border: 0px;
    
 } 
@@ -75,31 +78,58 @@ input.datar {
     width: 101.5%; 
     height: 30px; 
     border: 2px solid;
-}  
+}   
+
+
+
 
 ul {
     list-style-type: none;
-    margin: 0; 
-    margin-right: 0; 
-    margin-left: 0;
+    margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #3b3b4f;
+    width: 15%;
+    background-color: #f1f1f1;
     position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  li {
-    float: left;
-    border-right: 1px solid #bbb;
+    height: 100%;
+    overflow:auto;
   }
   
   li a {
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    color: #000;
+    padding: 8px 16px;
     text-decoration: none;
   }
+  
+  li a.active {
+    background-color: #6c70dc;
+    color: white; 
+    
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #6c70dc;
+    color: white;
+  }   
+
+  
+  tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left; 
+    padding: 5px 25px; 
+    border: none; 
+    border-collapse: collapse;
+} 
+
+
+
+
+  
+
+
+
+
+  
+
 

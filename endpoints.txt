@@ -1,0 +1,13 @@
+OK:  
+
+http://localhost/veneera_prod/dpt_customerservice.php 
+
+http://localhost/veneera_prod/dpt_production.php   
+
+http://localhost/veneera_prod/dpt_warehouse.php   
+
+http://localhost/veneera_prod/rcl_is_create.php   
+
+http://localhost/veneera_prod/rcl_is_delete.php   
+
+http://localhost/veneera_prod/rcl_is_read.php   
