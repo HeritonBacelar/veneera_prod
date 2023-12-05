@@ -93,7 +93,8 @@
         
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0; 
+    
     }    
         
        
@@ -103,13 +104,21 @@
     display: block;
     color: #FFF;
     padding: 10px 10px;
-    text-decoration: none; 
+    text-decoration: none;  
+    
+    
    
+  } 
+
+  li a.home{ 
+    text-align: center; 
+
   }
   
   li a.active {
     background-color: #68c4af; 
-    color: white; 
+    color: white;  
+    
 
   }
   
@@ -187,21 +196,21 @@
 <body>
 
     <header>
-        <h2>VENEERA WORKFLOW</h2>
+        <h2></h2>
     </header>
 
     <nav>
         <ul> 
-            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+            <li><a class="home" href="#"><i class="fa-solid fa-house"></i></a></li>
            
             <li><a class="active" href="#"><i class="fa-solid fa-handshake"></i> Customer Serv.</a></li>
-            <li><a href="rcl_is_create.php">Create RCL IS</a></li>
-            <li><a href="rcl_vs_create.php">Create RCL VS</a></li> 
-            <li><a href="#">Create reorder</a></li> 
-            <li><a href="#">Create storno</a></li> 
+            <li><a href="rcl_is_create.php"><i class="fa-solid fa-plus"></i>  RCL Impression Set</a></li>
+            <li><a href="rcl_vs_create.php"><i class="fa-solid fa-plus"></i>  RCL Veneer Set</a></li> 
+            <li><a href="#"><i class="fa-solid fa-plus"></i>  Reorder</a></li> 
+            <li><a href="#"><i class="fa-solid fa-plus"></i> Cancellation</a></li> 
             <li><a class="active" href="#"><i class="fas fa-warehouse"></i> Warehouse</a></li> 
             <li><a href="rcl_is_read.php">Open orders</a></li> 
-            <li><a href="#">Closed orders</a></li> 
+            <li><a href="rcl_is_closed.php">Closed orders</a></li> 
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
             <li><a href="">All orders</a></li> 
             <li><a href="rcl_vs_read.php">RCL VS orders</a></li> 

@@ -29,7 +29,7 @@ include('layout.php');
 
 <main> 
     <section> 
-    <h2>Create Veneer set reclamations</h2>      
+    <h2>ADD VENEER SET RECLAMATION</h2>      
     <form action="rcl_vs_create.php" method="post">  
         
             <label for="order_number"> Order Number:

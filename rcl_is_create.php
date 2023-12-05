@@ -30,7 +30,7 @@ include('layout.php')
     
 <section> 
     
-<h1>Create impression set reclamations</h1>
+<h1>ADD IMPRESSION SET RECLAMATION</h1>
 
 <!-- Form with additional date, select, and textarea -->
 <form action= "rcl_is_create.php" method="post">

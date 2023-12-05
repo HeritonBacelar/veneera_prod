@@ -1,7 +1,7 @@
 <?php  
 include_once('dbConnection.php'); 
 
-$result = mysqli_query ($conn, "SELECT * FROM rcl_impression_set ORDER BY rcl_is_id DESC ");
+$result = mysqli_query ($conn, "SELECT * FROM rcl_is_closed ORDER BY rcl_is_id DESC ");
 
 ?>
 
@@ -13,9 +13,8 @@ include('layout.php');
 
 
 <main> 
-    <section> 
-    
-    <h2><i class="fa-solid fa-truck-fast"></i> IMPRESSION SETS TO BE SENT</h2>
+    <section>  
+    <h2>IMPRESSION SETS SENT</h2>
     <table class="sty">
                 <thead>
                     <tr>
@@ -25,7 +24,7 @@ include('layout.php');
                         <th>Attempts</th> 
                         <th>Reason</th> 
                         <th>Info</th> 
-                        <th>Action</th>
+                        <th>Sent</th>
                         <!-- Add more headers as needed -->
                     </tr>
                 </thead>
@@ -42,16 +41,7 @@ include('layout.php');
             echo "<td>" .$res['attempts']. "</td>"; 
             echo "<td>" .$res['reason']. "</td>";  
             echo "<td>" .$res['info']. "</td>"; 
-            
-            echo "<td> 
-
-                      
-                        <a class='btn btn-sm btn-danger' href='rcl_is_delete.php?rcl_is_id=$res[rcl_is_id]' title='send'> 
-                         
-                        <i class='fa-solid fa-square-check fa-2xl' style='color: #16922f; text-align: right;'></i> 
-                        
-                        </a>
-                 </td>";
+            echo "<td>" .$res['sent']. "</td>";
 
           echo "</tr>";
         }
