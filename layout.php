@@ -202,18 +202,20 @@
     <nav>
         <ul> 
             <li><a class="home" href="#"><i class="fa-solid fa-house"></i></a></li>
-           
+            <!-- Customer services nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-handshake"></i> Customer Serv.</a></li>
             <li><a href="rcl_is_create.php"><i class="fa-solid fa-plus"></i>  RCL Impression Set</a></li>
             <li><a href="rcl_vs_create.php"><i class="fa-solid fa-plus"></i>  RCL Veneer Set</a></li> 
             <li><a href="#"><i class="fa-solid fa-plus"></i>  Reorder</a></li> 
             <li><a href="#"><i class="fa-solid fa-plus"></i> Cancellation</a></li> 
+               <!-- Warehouse nav -->
             <li><a class="active" href="#"><i class="fas fa-warehouse"></i> Warehouse</a></li> 
-            <li><a href="rcl_is_read.php">Open orders</a></li> 
-            <li><a href="rcl_is_closed.php">Closed orders</a></li> 
+            <li><a href="rcl_is_read.php"><i class="fa-solid fa-box"></i></i> To be shipped</a></li> 
+            <li><a href="rcl_is_closed.php"><i class="fa-solid fa-truck-fast"></i> Shipped</a></li> 
+            <li><a href=""><i class="fa-solid fa-plus"></i> Returned impression</a></li>  
+             <!-- Production nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
-            <li><a href="">All orders</a></li> 
-            <li><a href="rcl_vs_read.php">RCL VS orders</a></li> 
+            <li><a href="">New Orders</a></li> 
             <li><a href="">Printing protocol</a></li> 
             <li><a href="">Finishing protocol</a></li> 
             <li><a href="">Finished</a></li>
