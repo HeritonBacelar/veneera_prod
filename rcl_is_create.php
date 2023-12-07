@@ -11,10 +11,12 @@ if (isset($_POST['submit'])) {
     $as_df=$_POST['as_df']; 
     $attempts=$_POST['attempts']; 
     $reason=$_POST['reason']; 
+    $shipping_cost=$_POST['shipping_cost']; 
+    $service_fee=$_POST['service_fee']; 
     $info=$_POST['info']; 
 
-    $result = mysqli_query($conn, "INSERT INTO rcl_impression_set(order_number, as_df, attempts, reason, info)  
-    VALUES ('$order_number','$as_df','$attempts','$reason','$info')");
+    $result = mysqli_query($conn, "INSERT INTO rcl_impression_set(order_number, as_df, attempts, reason, shipping_cost, service_fee, info)  
+    VALUES ('$order_number','$as_df','$attempts','$reason', '$shipping_cost', '$service_fee', '$info')");
 
 }
 
@@ -57,9 +59,29 @@ include('layout.php')
                 <select id="reason" name="reason" required>
                    <option value="">--Select--</option> 
                     <option value="Lost">Lost</option> 
-                    <option value="Agreement">Agreement</option> 
-                    <option value="Offer">Offer</option>   
+                    <option value="Agreement">Agreement/Offer</option> 
+                    <option value="Offer">Missing material</option> 
+                    <option value="Offer">Wrong address</option> 
+                    <option value="Offer">Damaged during shipping</option> 
+                    <option value="Offer">Keine RO</option> 
+                    <option value="Offer">Veneer doesn't fit</option> 
                 </select> 
+                <label for="shipping_cost">Shipping Cost:</label>
+                <select id="shipping_cost" name="shipping_cost" required>
+                    <option value="">--Select--</option>
+                    <option value="paid">Paid</option> 
+                    <option value="pending">Pending</option> 
+                    <option value="free">Free</option> 
+                    <option value="do not apply">Do not apply</option>
+                </select> 
+                <label for="service_fee">Service fee:</label>
+                <select id="service_fee" name="service_fee" required>
+                    <option value="">--Select--</option>
+                    <option value="paid">Paid</option> 
+                    <option value="pending">Pending</option> 
+                    <option value="free">Good will</option> 
+                    <option value="do not apply">Do not apply</option>
+                </select>  
 
                 <label for="info">Info:</label>
                 <textarea id="info" name="info" rows="4" required></textarea>

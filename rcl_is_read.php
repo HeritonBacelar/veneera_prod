@@ -24,6 +24,8 @@ include('layout.php');
                         <th>AS/DF</th> 
                         <th>Attempts</th> 
                         <th>Reason</th> 
+                        <th>Shipping Cost</th> 
+                        <th>Service fee</th>                              
                         <th>Info</th> 
                         <th>Action</th>
                         <!-- Add more headers as needed -->
@@ -40,7 +42,9 @@ include('layout.php');
             echo "<td>" .$res['order_number']. "</td>";  
             echo "<td>" .$res['as_df']. "</td>"; 
             echo "<td>" .$res['attempts']. "</td>"; 
-            echo "<td>" .$res['reason']. "</td>";  
+            echo "<td>" .$res['reason']. "</td>"; 
+            echo "<td>" .$res['shipping_cost']. "</td>";  
+            echo "<td>" .$res['service_fee']. "</td>";   
             echo "<td>" .$res['info']. "</td>"; 
             
             echo "<td> 

@@ -32,7 +32,7 @@
             position: fixed;
             top: 0; /* Height of the header */
             left: 0;
-            width: 12%; /* 10% of the viewport width */
+            width: 15%; /* 10% of the viewport width */
             height: 100vh; /* 100% of the viewport height */
             background-color: #404e67; /* You can change the background color */
             color: #fff; /* You can change the text color */
@@ -136,6 +136,7 @@
             border: 1px solid #ddd;
             padding: 20px;
             border-radius: 5px; /* Add border-radius to the form */ 
+            box-shadow: 2px 4px 10px rgba(0,0,0,.13) 
             
         }
 
@@ -204,8 +205,8 @@
             <li><a class="home" href="#"><i class="fa-solid fa-house"></i></a></li>
             <!-- Customer services nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-handshake"></i> Customer Serv.</a></li>
-            <li><a href="rcl_is_create.php"><i class="fa-solid fa-plus"></i>  RCL Impression Set</a></li>
-            <li><a href="rcl_vs_create.php"><i class="fa-solid fa-plus"></i>  RCL Veneer Set</a></li> 
+            <li><a href="rcl_is_create.php"><i class="fa-solid fa-plus"></i> Impression Set</a></li>
+            <li><a href="rcl_vs_create.php"><i class="fa-solid fa-plus"></i> Veneer Set</a></li> 
             <li><a href="#"><i class="fa-solid fa-plus"></i>  Reorder</a></li> 
             <li><a href="#"><i class="fa-solid fa-plus"></i> Cancellation</a></li> 
                <!-- Warehouse nav -->
@@ -215,7 +216,7 @@
             <li><a href=""><i class="fa-solid fa-plus"></i> Returned impression</a></li>  
              <!-- Production nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
-            <li><a href="">New Orders</a></li> 
+            <li><a href="new_prod_orders.php">New Orders</a></li> 
             <li><a href="">Printing protocol</a></li> 
             <li><a href="">Finishing protocol</a></li> 
             <li><a href="">Finished</a></li>

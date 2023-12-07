@@ -11,3 +11,13 @@ http://localhost/veneera_prod/rcl_is_create.php
 http://localhost/veneera_prod/rcl_is_delete.php   
 
 http://localhost/veneera_prod/rcl_is_read.php   
+
+
+Notes: 
+
+When it is broken and does not fit it goes directly to warehouse. 
+
+Add shopify updated orders section  
+
+Add options to service fee and shipping cost colums    
+
