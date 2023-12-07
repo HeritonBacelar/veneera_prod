@@ -10,10 +10,13 @@ if (isset($_POST['submit'])) {
     $issue=$_POST['issue']; 
     $issue_date=$_POST['issue_date']; 
     $veneer_set=$_POST['veneer_set']; 
+    $shipping_cost=$_POST['shipping_cost'];   
+    $service_fee=$_POST ['service_fee'];
     $info=$_POST['info']; 
+     
 
-    $result = mysqli_query($conn, "INSERT INTO rcl_veneer_set(order_number, issue, issue_date, veneer_set, info)  
-    VALUES ('$order_number','$issue','$issue_date','$veneer_set','$info')");
+    $result = mysqli_query($conn, "INSERT INTO rcl_veneer_set(order_number, issue, issue_date, veneer_set, shipping_cost, service_fee, info)  
+    VALUES ('$order_number','$issue','$issue_date','$veneer_set','$shipping_cost','$service_fee', '$info')");
 
 }
 
@@ -35,15 +38,18 @@ include('layout.php');
             <label for="order_number"> Order Number:
                 <input id="order_number" type="text" name="order_number"> 
             </label> 
-            <label for="issue">Issue: 
+            <label for="issue">Reason: 
                 <select name="issue" id="issue"> 
                     <option value="">--Select--</option>
-                    <option value="Lost">Lost</option> 
+                    <option value="reorder">RO</option> 
+                    <option value="offer">Offer/Agreement</option>
+                    <option value="Lost">Lost during shipment</option> 
                     <option value="Broken">Broken</option> 
+                    <option value="damaged">Damaged during shipment</option> 
                     <option value="Fitting">Fitting</option>  
                 </select>
             </label> 
-            <label for="issue_date"> Date of issue:
+            <label for="issue_date"> Date of request:
                 <input type="date" class="issue_date" name="issue_date">
             </label>  
             <label for="veneer_set">Veneer set: 
@@ -54,7 +60,24 @@ include('layout.php');
                     <option value="Top/Bottom">Top/Bottom</option> 
                     
                 </select>
-            </label>  
+            </label> 
+            <label for="shipping_cost">Shipping Cost:</label>
+                <select id="shipping_cost" name="shipping_cost" required>
+                    <option value="">--Select--</option>
+                    <option value="paid">Paid</option> 
+                    <option value="pending">Pending</option> 
+                    <option value="free">Free</option> 
+                    <option value="do not apply">Do not apply</option>
+                </select> 
+                <label for="service_fee">Service fee:</label>
+                <select id="service_fee" name="service_fee" required>
+                    <option value="">--Select--</option>
+                    <option value="paid">Paid</option> 
+                    <option value="pending">Pending</option> 
+                    <option value="free">Good will</option> 
+                    <option value="do not apply">Do not apply</option>
+                </select>  
+            
             <label for="info">Info: 
                 <textarea name="info" id="info" cols="33" rows="5"></textarea>
             </label> 
