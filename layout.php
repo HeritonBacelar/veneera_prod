@@ -207,7 +207,7 @@
             <li><a class="active" href="#"><i class="fa-solid fa-handshake"></i> Customer Serv.</a></li>
             <li><a href="rcl_is_create.php"><i class="fa-solid fa-plus"></i> Impression Set</a></li>
             <li><a href="rcl_vs_create.php"><i class="fa-solid fa-plus"></i> Veneer Set</a></li> 
-            <li><a href="#"><i class="fa-solid fa-plus"></i>  Reorder</a></li> 
+             
             <li><a href="#"><i class="fa-solid fa-plus"></i> Cancellation</a></li> 
                <!-- Warehouse nav -->
             <li><a class="active" href="#"><i class="fas fa-warehouse"></i> Warehouse</a></li> 
