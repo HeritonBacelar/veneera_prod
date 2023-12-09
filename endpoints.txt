@@ -19,5 +19,11 @@ When it is broken and does not fit it goes directly to warehouse.
 
 Add shopify updated orders section  
 
-Add options to service fee and shipping cost colums    
+Add options to service fee and shipping cost colums - ok   
+
+---------
+If result  == good → fazer INSERT na table suitble_impressions e fazer o READ da tabela suitble_impressions na pagina Printing protocol na aplicacao 
+
+else -> Fazer INSERT na table notsuitble_impressions e fazer o READ da tabela notsuitble_impressions na pagina notifications na aplicacao 
+
 
