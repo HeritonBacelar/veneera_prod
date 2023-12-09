@@ -15,7 +15,7 @@ include('layout.php');
 <main> 
     <section> 
     
-    <h2><i class="fa-solid fa-truck-fast"></i> IMPRESSION SETS TO BE SENT</h2>
+    <h2 class="h"><i class="fa-solid fa-truck-fast"></i> IMPRESSION SETS TO BE SENT</h2>
     <table class="sty">
                 <thead>
                     <tr>

@@ -51,6 +51,11 @@
 
         section {
             text-align: center; 
+            padding:20px; 
+           
+      justify-content: center;
+      align-items: center;
+       
             
         }
 
@@ -131,12 +136,13 @@
   
   form {
             width: 100%;
-            max-width: 400px; /* Set a maximum width for the form */
+            max-width: 500px; /* Set a maximum width for the form */
             margin: 20px auto; /* Center the form horizontally */
             border: 1px solid #ddd;
             padding: 20px;
             border-radius: 5px; /* Add border-radius to the form */ 
-            box-shadow: 2px 4px 10px rgba(0,0,0,.13) 
+            box-shadow: 2px 4px 10px rgba(0,0,0,.13); 
+            
             
         }
 
@@ -151,18 +157,12 @@
             width: 100%;
             padding: 8px;
             margin-bottom: 15px;
-            box-sizing: border-box;
+            box-sizing: border-box; 
+            display: inline-block;
+            
         }
 
-        button {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-
-        }
+       
 
         @media (max-width: 768px) {
             nav {
@@ -209,14 +209,14 @@
             <li><a href="rcl_vs_create.php"><i class="fa-solid fa-plus"></i> Veneer Set</a></li> 
              
             <li><a href="#"><i class="fa-solid fa-plus"></i> Cancellation</a></li> 
-               <!-- Warehouse nav -->
+            <!-- Warehouse nav -->
             <li><a class="active" href="#"><i class="fas fa-warehouse"></i> Warehouse</a></li> 
             <li><a href="rcl_is_read.php"><i class="fa-solid fa-box"></i></i> To be shipped</a></li> 
             <li><a href="rcl_is_closed.php"><i class="fa-solid fa-truck-fast"></i> Shipped</a></li> 
             <li><a href=""><i class="fa-solid fa-plus"></i> Returned impression</a></li>  
              <!-- Production nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
-            <li><a href="new_prod_orders.php">New Orders</a></li> 
+            <li><a href="">Not suitble</a></li>
             <li><a href="">Printing protocol</a></li> 
             <li><a href="">Finishing protocol</a></li> 
             <li><a href="">Finished</a></li>
