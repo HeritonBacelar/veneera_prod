@@ -213,9 +213,10 @@
             <li><a class="active" href="#"><i class="fas fa-warehouse"></i> Warehouse</a></li> 
             <li><a href="rcl_is_read.php"><i class="fa-solid fa-box"></i></i> To be shipped</a></li> 
             <li><a href="rcl_is_closed.php"><i class="fa-solid fa-truck-fast"></i> Shipped</a></li> 
-            <li><a href=""><i class="fa-solid fa-plus"></i> Returned impression</a></li>  
+              
              <!-- Production nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
+            <li><a href="prod_create.php"><i class="fa-solid fa-plus"></i> Returned impression</a></li>
             <li><a href="">Not suitble</a></li>
             <li><a href="">Printing protocol</a></li> 
             <li><a href="">Finishing protocol</a></li> 
