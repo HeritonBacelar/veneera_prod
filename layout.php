@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif; 
+            background-color: #f4f4f4 
         }
 
         header {
@@ -24,7 +25,8 @@
             text-align: center;
             line-height: 1.5vh;  /* Adjust line-height for vertical centering if needed */ 
            /*  box-shadow: 2px 4px 10px rgba(0,0,0,.13);  */
-            font-weight: bold;
+            font-weight: bold; 
+            background-color: #f4f4f4
         }
 
         nav { 
@@ -65,7 +67,8 @@
            
             border: 0px; 
             
-            margin: 20px auto; /* Center the table horizontally */ 
+            margin: 20px auto; /* Center the table horizontally */  
+            background-color: #fff
             
             
         }
@@ -142,6 +145,7 @@
             padding: 20px;
             border-radius: 5px; /* Add border-radius to the form */ 
             box-shadow: 2px 4px 10px rgba(0,0,0,.13); 
+            background-color: #fff
             
             
         }
@@ -217,10 +221,10 @@
              <!-- Production nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
             <li><a href="prod_create.php"><i class="fa-solid fa-plus"></i> Returned impression</a></li>
-            <li><a href="">Not suitble</a></li>
-            <li><a href="">Printing protocol</a></li> 
-            <li><a href="">Finishing protocol</a></li> 
-            <li><a href="">Finished</a></li>
+            <li><a href=""><i class="fa-solid fa-circle-xmark"></i> Not suitble</a></li>
+            <li><a href="prod_read.php"><i class="fa-solid fa-print"></i> Printing protocol</a></li> 
+            <li><a href=""><i class="fa-solid fa-paint-roller"></i>  Finishing protocol</a></li> 
+            <li><a href=""><i class="fa-solid fa-teeth"></i> Finished</a></li>
             <!-- Add more navigation items as needed -->
         </ul>
     </nav>

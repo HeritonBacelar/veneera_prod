@@ -20,8 +20,24 @@ if (isset($_POST['submit'])) {
         $tableName = 'notsuitble_impressions';
     } 
 
-    $result = mysqli_query($conn, "INSERT INTO $tableName (order_number, veneer_set, top_set, bottom_set, IBI_reason, impression_status, info)  
-    VALUES ('$order_number', '$veneer_set', '$top_set', '$bottom_set', '$IBI_reason', '$impression_status', '$info')");
+    $result = mysqli_query($conn, "INSERT INTO $tableName ( 
+        
+        order_number,  
+        veneer_set,  
+        top_set,  
+        bottom_set,  
+        IBI_reason,  
+        impression_status,  
+        info)  
+    
+    VALUES ( 
+        '$order_number',  
+        '$veneer_set',  
+        '$top_set',  
+        '$bottom_set',  
+        '$IBI_reason',  
+        '$impression_status',  
+        '$info')");
 
 }  
 
