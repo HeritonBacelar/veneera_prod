@@ -11,14 +11,27 @@ if (isset($_POST['submit'])) {
     $impression_status = $_POST['impression_status']; 
     $info=$_POST['info'];  
     
-    $tableName = "default_table";
+    $tableName = "default_table";  
 
-    if($impression_status === 'good'){  
-        $tableName = 'suitble_impressions';
+    switch($impression_status){ 
+        
+        case 'good': 
+            $tableName = 'suitble_impressions'; 
+            break; 
+        case 'partially_good': 
+            $tableName = 'partially_suitble'; 
+            break; 
+        
+        case 'completely_wrong':  
+            $tableName = 'notsuitble_impressions'; 
+            break;
+        case 'unused': 
+            $tableName = 'notsuitble_impressions'; 
+            break;
 
-    } else { 
-        $tableName = 'notsuitble_impressions';
-    } 
+   }
+   
+ 
 
     $result = mysqli_query($conn, "INSERT INTO $tableName ( 
         
@@ -93,9 +106,9 @@ if (isset($_POST['submit'])) {
                 <label for="impression_status">Impression status</label>
                 <select id="impression_status" name="impression_status" required>
                 <option value="">--Select--</option>
-                    <option value="Completely wrong ">completely_wrong </option> 
+                    <option value="completely_wrong">completely_wrong </option> 
                     <option value="good">good</option> 
-                    <option value="partially good">partially_good</option> 
+                    <option value="partially_good">partially_good</option> 
                     <option value="unused">unused</option> 
                     
                 </select> 

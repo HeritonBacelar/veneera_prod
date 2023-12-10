@@ -221,7 +221,7 @@
              <!-- Production nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
             <li><a href="prod_create.php"><i class="fa-solid fa-plus"></i> Returned impression</a></li>
-            <li><a href=""><i class="fa-solid fa-circle-xmark"></i> Not suitble</a></li>
+            <li><a href="prod_read_ns.php"><i class="fa-solid fa-circle-xmark"></i> Not suitble</a></li>
             <li><a href="prod_read.php"><i class="fa-solid fa-print"></i> Printing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-paint-roller"></i>  Finishing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-teeth"></i> Finished</a></li>
