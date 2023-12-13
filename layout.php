@@ -36,11 +36,14 @@
             left: 0;
             width: 15%; /* 10% of the viewport width */
             height: 100vh; /* 100% of the viewport height */
-            background-color: #404e67; /* You can change the background color */
-            color: #fff; /* You can change the text color */
+           /*  background-color: #404e67;  *//* You can change the background color */
+            color: #2B2A4C; /* You can change the text color */
             /* padding-top: 20px; */ /* Adjust padding as needed */
             text-align: left;  
-            overflow-y: scroll;
+            /* overflow-y: scroll; */ 
+            box-shadow: 2px 4px 10px rgba(0,0,0,.13);  
+            padding: 10px; 
+            background-color: #fff
            
             
             
@@ -111,9 +114,10 @@
 
     li a {
     display: block;
-    color: #FFF;
-    padding: 10px 10px;
-    text-decoration: none;  
+    color: #000;
+    padding: 9px 10px;
+    text-decoration: none;   
+   
     
     
    
@@ -125,8 +129,13 @@
   }
   
   li a.active {
-    background-color: #68c4af; 
-    color: white;  
+    /* background-color: #68c4af;  */
+    color: #fff; 
+    border-radius: 15px;  
+    /* background-color: #7071E8 */ 
+    background-color: #39A7FF;  
+    width: 80%
+   
     
 
   }
@@ -138,22 +147,35 @@
   } 
   
   
-  form {
+  
+
+        fieldset {  
+
             width: 100%;
             max-width: 500px; /* Set a maximum width for the form */
             margin: 20px auto; /* Center the form horizontally */
             border: 1px solid #ddd;
             padding: 20px;
-            border-radius: 5px; /* Add border-radius to the form */ 
+            border-radius: 15px; /* Add border-radius to the form */ 
             box-shadow: 2px 4px 10px rgba(0,0,0,.13); 
             background-color: #fff
-            
-            
+
+
+        } 
+
+        legend { 
+            /* background-color: #68c4af;  */
+            color: #fff; 
+            padding: 3px 6px; 
+            border-radius: 15px; 
+            /* background-color: #7071E8 */ 
+            background-color:#39A7FF
         }
 
         label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 10px; 
+        
         }
 
         input,
@@ -163,7 +185,9 @@
             padding: 8px;
             margin-bottom: 15px;
             box-sizing: border-box; 
-            display: inline-block;
+            display: inline-block; 
+            border-radius: 10px; 
+            border: 1px solid #ddd; 
             
         }
 
@@ -229,8 +253,8 @@
              <!-- Production nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
             
-            
-            <li><a href="prod_read.php"><i class="fa-solid fa-print"></i> Printing protocol</a></li> 
+            <li><a href=""> Reclamation</a></li>
+            <li><a href=""><i class="fa-solid fa-print"></i> Printing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-paint-roller"></i>  Finishing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-teeth"></i> Finished</a></li>
             

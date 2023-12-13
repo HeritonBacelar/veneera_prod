@@ -9,14 +9,14 @@ if (isset($_POST['submit'])) {
     $order_number=$_POST['order_number']; 
     $issue=$_POST['issue']; 
     $issue_date=$_POST['issue_date']; 
-    $veneer_set=$_POST['veneer_set']; 
+    $jaw_color=$_POST['jaw_color']; 
     $shipping_cost=$_POST['shipping_cost'];   
     $service_fee=$_POST ['service_fee'];
     $info=$_POST['info']; 
      
 
-    $result = mysqli_query($conn, "INSERT INTO rcl_veneer_set(order_number, issue, issue_date, veneer_set, shipping_cost, service_fee, info)  
-    VALUES ('$order_number','$issue','$issue_date','$veneer_set','$shipping_cost','$service_fee', '$info')");
+    $result = mysqli_query($conn, "INSERT INTO rcl_veneer_set(order_number, issue, issue_date, jaw_color, shipping_cost, service_fee, info)  
+    VALUES ('$order_number','$issue','$issue_date','$jaw_color','$shipping_cost','$service_fee', '$info')");
 
 }
 
@@ -32,58 +32,71 @@ include('layout.php');
 
 <main> 
     <section> 
-    <h2>ADD VENEER SET RECLAMATION</h2>      
-    <form action="rcl_vs_create.php" method="post">  
-        
-            <label for="order_number"> Order Number:
-                <input id="order_number" type="text" name="order_number"> 
-            </label> 
-            <label for="issue">Reason: 
+    <h2>VENEER REQUESTS</h2>      
+    <form action="rcl_vs_create.php" method="post"> 
+        <fieldset> 
+            <legend>Genera informations</legend> 
+            
+            <label for="order_number"> Order Number:</label> 
+            <input id="order_number" type="text" name="order_number"> 
+            
+            <label for="issue">Reason:</label>  
                 <select name="issue" id="issue"> 
                     <option value="">--Select--</option>
-                    <option value="reorder">RO</option> 
+                    <option value="reorder">Reorder-RO</option> 
                     <option value="offer">Offer/Agreement</option>
                     <option value="Lost">Lost during shipment</option> 
                     <option value="Broken">Broken</option> 
                     <option value="damaged">Damaged during shipment</option> 
-                    <option value="Fitting">Fitting</option>  
-                </select>
-            </label> 
-            <label for="issue_date"> Date of request:
-                <input type="date" class="issue_date" name="issue_date">
-            </label>  
-            <label for="veneer_set">Veneer set: 
-                <select name="veneer_set" id="veneer_set"> 
-                    <option value="">--Select--</option>
-                    <option value="Top">Top</option> 
-                    <option value="Bottom">Bottom</option> 
-                    <option value="Top/Bottom">Top/Bottom</option> 
-                    
-                </select>
-            </label> 
-            <label for="shipping_cost">Shipping Cost:</label>
-                <select id="shipping_cost" name="shipping_cost" required>
-                    <option value="">--Select--</option>
-                    <option value="paid">Paid</option> 
-                    <option value="pending">Pending</option> 
-                    <option value="free">Free</option> 
-                    <option value="do not apply">Do not apply</option>
+                    <option value="Fitting">Does not fit</option> 
                 </select> 
-                <label for="service_fee">Service fee:</label>
-                <select id="service_fee" name="service_fee" required>
+
+                <label for="issue_date"> Date of request:</label>
+                <input type="date" class="issue_date" name="issue_date">
+              
+            <label for="jaw_color">Jaw/Color: </label> 
+                <select name="jaw_color" id="jaw_color"> 
                     <option value="">--Select--</option>
-                    <option value="paid">Paid</option> 
-                    <option value="pending">Pending</option> 
-                    <option value="free">Good will</option> 
-                    <option value="do not apply">Do not apply</option>
-                </select>  
+                    <option value="TN">TN</option> 
+                    <option value="BN">BN</option> 
+                    <option value="TH">TH</option> 
+                    <option value="BH">BH</option> 
+                    <option value="PN">PN</option> 
+                    <option value="PH">PH</option> 
+                </select> 
+                    
+                
             
-            <label for="info">Info: 
-                <textarea name="info" id="info" cols="33" rows="5"></textarea>
-            </label> 
             
+        </fieldset> 
+
+        <fieldset> 
+            <legend><i class="fas fa-warehouse"></i> Warehouse</legend> 
+            <label for="">Action</label> 
+            <select name="" id=""> 
+                <option value="">Send IBS set</option> 
+                <option value="">Send new IS </option>
+            </select>
+        </fieldset> 
+
+        <fieldset> 
+            <legend><i class="fa-solid fa-industry"></i> Production</legend> 
+            <label for="">Action</label> 
+            <select name="" id=""> 
+                <option value="">Produce IBS set</option> 
+                <option value="">Produce 2x Top</option>
+            </select>
+        </fieldset>
         
-        <input type="submit" name="submit" id="submit" class="send" value="Send">
+        <fieldset>
+           <label for="info">Info: </label>  
+            <textarea name="info" id="info" cols="33" rows="5"></textarea>
+              
+        
+        <input type="submit" name="submit" id="submit" class="send" value="Send"> 
+        </fieldset>
+   
+
     </form> 
 
     </section> 

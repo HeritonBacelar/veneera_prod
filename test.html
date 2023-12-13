@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    button {
+      grid-column: span 3; /* Span the button across all columns */
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    fieldset {
+      grid-column: span 3;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+  </style>
+  <title>Styled Form</title>
+</head>
+<body>
+
+  <form>
+    <fieldset>
+      <legend>Fieldset 1</legend>
+
+      <label for="field1">Label 1:</label>
+      <input type="text" id="field1" name="field1">
+      
+      <label for="field2">Label 2:</label>
+      <input type="text" id="field2" name="field2">
+
+      <label for="field3">Label 3:</label>
+      <input type="text" id="field3" name="field3">
+    </fieldset>
+
+    <fieldset>
+      <legend>Fieldset 2</legend>
+
+      <label for="field4">Label 4:</label>
+      <input type="text" id="field4" name="field4">
+      
+      <label for="field5">Label 5:</label>
+      <input type="text" id="field5" name="field5">
+
+      <label for="field6">Label 6:</label>
+      <input type="text" id="field6" name="field6">
+    </fieldset>
+
+    <div style="grid-column: span 3;">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+
+    <button type="submit">Send</button>
+  </form>
+
+</body>
+</html>

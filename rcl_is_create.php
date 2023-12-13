@@ -36,16 +36,17 @@ include('layout.php')
 
 <!-- Form with additional date, select, and textarea -->
 <form action= "rcl_is_create.php" method="post">
-                <label for="order_number">Order Number:</label>
-                <input type="text" id="order_number" name="order_number" required> 
-
+                
+                 <fieldset> 
+                 <label for="order_number">Order Number:</label>
+                 <input type="text" id="order_number" name="order_number" required> 
+                 
                 <label for="as_df">AS/DF:</label>
                 <select id="as_df" name="as_df" required>
                     <option value="">--Select--</option>
                     <option value="as">AS</option> 
                     <option value="df">DF</option>
-                </select>
-
+                </select> 
                 <label for="attempts">Attempts:</label>
                 <select id="attempts" name="attempts" required>
                 <option value="">--Select--</option>
@@ -54,7 +55,6 @@ include('layout.php')
                     <option value="6 attempts">6 Attempts</option> 
                     <option value="8 attempts">8 Attempts</option>  
                 </select> 
-
                 <label for="reason">Reason:</label>
                 <select id="reason" name="reason" required>
                    <option value="">--Select--</option> 
@@ -65,7 +65,16 @@ include('layout.php')
                     <option value="Offer">Damaged during shipping</option> 
                     <option value="Offer">Keine RO</option> 
                     <option value="Offer">Veneer doesn't fit</option> 
-                </select> 
+                </select>  
+
+
+                 </fieldset>
+               
+
+                
+                
+
+                
                 <label for="shipping_cost">Shipping Cost:</label>
                 <select id="shipping_cost" name="shipping_cost" required>
                     <option value="">--Select--</option>

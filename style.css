@@ -120,7 +120,22 @@ ul {
     padding: 5px 25px; 
     border: none; 
     border-collapse: collapse;
-} 
+}   
+
+/* Form old  */
+
+form {
+    width: 100%;
+    max-width: 500px; /* Set a maximum width for the form */
+    margin: 20px auto; /* Center the form horizontally */
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px; /* Add border-radius to the form */ 
+    box-shadow: 2px 4px 10px rgba(0,0,0,.13); 
+    background-color: #fff
+    
+    
+}  
 
 
 
