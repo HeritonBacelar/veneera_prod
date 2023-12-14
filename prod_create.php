@@ -61,8 +61,9 @@ if (isset($_POST['submit'])) {
 <main>  
     <section>  
         <h1>teste</h1> 
-        <form action= "prod_create.php" method="post">
-                <label for="order_number">Order Number:</label>
+        <form action= "prod_create.php" method="post"> 
+            <fieldset> 
+            <label for="order_number">Order Number:</label>
                 <input type="text" id="order_number" name="order_number" required> 
 
                 <label for="veneer_set">Veneer set:</label>
@@ -71,8 +72,7 @@ if (isset($_POST['submit'])) {
                     <option value="top">Top</option> 
                     <option value="bottom">Bottom</option> 
                     <option value="top/bottom">Top and Bottom</option>
-                </select>
-
+                </select> 
                 <label for="top_set">Top Inspec:</label>
                 <select id="top_set" name="top_set" required>
                 <option value="">--Select--</option>
@@ -81,7 +81,6 @@ if (isset($_POST['submit'])) {
                     <option value="unused">unused</option> 
                     
                 </select> 
-                
                 <label for="bottom_set">Bottom Inspec:</label>
                 <select id="bottom_set" name="bottom_set" required>
                 <option value="">--Select--</option>
@@ -90,8 +89,6 @@ if (isset($_POST['submit'])) {
                     <option value="unused">unused</option> 
                     
                 </select> 
-                
-
                 <label for="IBI_reason">IBI reason:</label>
                 <select id="IBI_reason" name="IBI_reason" required>
                 <option value="">--Select--</option>
@@ -102,7 +99,6 @@ if (isset($_POST['submit'])) {
                     <option value="n/a">n/a</option>
                     
                 </select> 
-                
                 <label for="impression_status">Impression status</label>
                 <select id="impression_status" name="impression_status" required>
                 <option value="">--Select--</option>
@@ -112,12 +108,15 @@ if (isset($_POST['submit'])) {
                     <option value="unused">unused</option> 
                     
                 </select> 
-                               
-
                 <label for="info">Info:</label>
                 <textarea id="info" name="info" rows="4" required></textarea>
 
-                <input type="submit" name="submit" id="submit" class="send" value="Send">
+                <input type="submit" name="submit" id="submit" class="send" value="Send">     
+
+
+            </fieldset>
+                
+           
 </form>
     </section>
 </main>

@@ -84,8 +84,9 @@
            
         }
 
-        th {
-            background-color: 	#68c4af;
+        th { 
+            background-color: #39A7FF; 
+            /* background-color: 	#68c4af; */
             color: #fff;
         }  
 
@@ -141,8 +142,12 @@
   }
   
   li a:hover:not(.active) {
-    background-color: #68c4af;
+    /* background-color: #68c4af; */
     color: white; 
+    background-color: #39A7FF; 
+    border-radius: 15px; 
+    width: 80%  
+
     /* height: 5vh */
   } 
   
@@ -244,24 +249,25 @@
             <li><a href="rcl_is_closed.php"><i class="fa-solid fa-truck-fast"></i> Shipped</a></li> 
             
             <!-- Inspection nav -->
-            <li><a class="active" href="#"><i class="fa-solid fa-magnifying-glass"></i> Inspections</a></li> 
-            <li><a href="prod_create.php"><i class="fa-solid fa-plus"></i> Inspection</a></li> 
-            <li><a href="prod_read.php"><i class="fa-solid fa-magnifying-glass"></i> New inspections</a></li> 
+            
+             
             
             
               
              <!-- Production nav -->
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
             
+            <li><a href="prod_create.php"><i class="fa-solid fa-plus"></i> Inspection</a></li> 
+            <li><a href="prod_read.php"><i class="fa-solid fa-magnifying-glass"></i> New inspections</a></li>
             <li><a href=""> Reclamation</a></li>
             <li><a href=""><i class="fa-solid fa-print"></i> Printing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-paint-roller"></i>  Finishing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-teeth"></i> Finished</a></li>
             
-            <!-- Warehouse nav -->
-            <li><a class="active" href="#"><i class="fas fa-warehouse"></i> Warehouse</a></li> 
-            <li><a href="rcl_is_read.php"><i class="fa-solid fa-box"></i></i> To be shipped</a></li> 
-            <li><a href="rcl_is_closed.php"><i class="fa-solid fa-truck-fast"></i> Shipped</a></li>
+            <!-- Finance nav -->
+            <li><a class="active" href="#"><i class="fa-solid fa-coins"></i> Finance</a></li> 
+            <li><a href="rcl_is_read.php"> Cancellation requests</a></li> 
+            <li><a href="rcl_is_closed.php"> Refunds</a></li>
         </ul>
     </nav>
 

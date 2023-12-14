@@ -65,7 +65,11 @@ include('layout.php')
                     <option value="Offer">Damaged during shipping</option> 
                     <option value="Offer">Keine RO</option> 
                     <option value="Offer">Veneer doesn't fit</option> 
-                </select>  
+                </select> 
+                <label for="info">Info:</label>
+                <textarea id="info" name="info" rows="4" required></textarea>
+
+                <input type="submit" name="submit" id="submit" class="send" value="Send">  
 
 
                  </fieldset>
@@ -75,7 +79,7 @@ include('layout.php')
                 
 
                 
-                <label for="shipping_cost">Shipping Cost:</label>
+               <!--  <label for="shipping_cost">Shipping Cost:</label>
                 <select id="shipping_cost" name="shipping_cost" required>
                     <option value="">--Select--</option>
                     <option value="paid">Paid</option> 
@@ -91,11 +95,8 @@ include('layout.php')
                     <option value="free">Good will</option> 
                     <option value="do not apply">Do not apply</option>
                 </select>  
-
-                <label for="info">Info:</label>
-                <textarea id="info" name="info" rows="4" required></textarea>
-
-                <input type="submit" name="submit" id="submit" class="send" value="Send">
+ -->
+                
 </form>
     <p>teste</p>
     
