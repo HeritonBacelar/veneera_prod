@@ -16,10 +16,10 @@ if (isset($_POST['submit'])) {
     switch($impression_status){ 
         
         case 'good': 
-            $tableName = 'suitble_impressions'; 
+            $tableName = 'printing_protocol'; 
             break; 
         case 'partially_good': 
-            $tableName = 'partially_suitble'; 
+            $tableName = 'printing_protocol'; 
             break; 
         
         case 'completely_wrong':  

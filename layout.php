@@ -248,7 +248,7 @@
             <li><a href="rcl_is_read.php"><i class="fa-solid fa-box"></i></i> To be shipped</a></li> 
             <li><a href="rcl_is_closed.php"><i class="fa-solid fa-truck-fast"></i> Shipped</a></li> 
             
-            <!-- Inspection nav -->
+           
             
              
             
@@ -258,9 +258,9 @@
             <li><a class="active" href="#"><i class="fa-solid fa-industry"></i> Production</a></li>  
             
             <li><a href="prod_create.php"><i class="fa-solid fa-plus"></i> Inspection</a></li> 
-            <li><a href="prod_read.php"><i class="fa-solid fa-magnifying-glass"></i> New inspections</a></li>
+            <li><a href="prod_ns_read.php"> Not suitble</a></li>
             <li><a href=""> Reclamation</a></li>
-            <li><a href=""><i class="fa-solid fa-print"></i> Printing protocol</a></li> 
+            <li><a href="printing_read.php"><i class="fa-solid fa-print"></i> Printing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-paint-roller"></i>  Finishing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-teeth"></i> Finished</a></li>
             

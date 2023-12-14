@@ -1,22 +1,20 @@
-<?php   
+<?php  
+include_once('dbConnection.php'); 
 
-include_once('dbConnection.php');  
+$result = mysqli_query ($conn, "SELECT * FROM printing_protocol ORDER BY suitble_id DESC ");
 
-$result = mysqli_query($conn, "SELECT * FROM notsuitble_impressions ORDER BY notsuitble_id DESC");
-
-
-?> 
+?>
 
 <?php   
 
 include('layout.php');
 
-?> 
+?>    
+
 
 <main> 
-    
-<section>  
-<h2 class="h"><i class="fa-solid fa-circle-xmark"></i> Not suitble</h2>
+    <section>  
+    <h2>Printing Protocol</h2>
     <table class="sty">
                 <thead>
                     <tr>
@@ -26,7 +24,7 @@ include('layout.php');
                         <th>Top Inspec</th> 
                         <th>Bottom Inspec</th> 
                         <th>IBI Reason</th> 
-                        <th>Impression Status</th>                              
+                        <th>Impression Status</th> 
                         <th>Info</th> 
                         <th>Action</th>
                         <!-- Add more headers as needed -->
@@ -39,36 +37,35 @@ include('layout.php');
         while ($res = mysqli_fetch_assoc($result)){ 
 
             echo "<tr>"; 
-            echo "<td>" .$res['notsuitble_id']. "</td>";   
-            echo "<td>" .$res['order_number']. "</td>";  
-            echo "<td>" .$res['veneer_set']. "</td>"; 
+            echo "<td>" .$res['suitble_id']. "</td>"; 
+            echo "<td>" .$res['order_number']. "</td>";    
+            echo "<td>" .$res['veneer_set']. "</td>";  
             echo "<td>" .$res['top_set']. "</td>"; 
             echo "<td>" .$res['bottom_set']. "</td>"; 
             echo "<td>" .$res['IBI_reason']. "</td>";  
-            echo "<td>" .$res['impression_status']. "</td>";   
+            echo "<td>" .$res['impression_status']. "</td>"; 
             echo "<td>" .$res['info']. "</td>"; 
             
             echo "<td> 
 
                       
-                        <a class='btn btn-sm btn-danger' href='prod_delete.php?suitble_id=$res[notsuitble_id]' title='send'> 
+                        <a class='btn btn-sm btn-danger' href='send_to_finishing.php?suitble_id=$res[suitble_id]' title='send'> 
                          
-                        <i class='fa-solid fa-square-check fa-2xl' style='color: #16922f; text-align: center;'></i> 
+                        <i class='fa-solid fa-square-check fa-2xl' style='color: #16922f; text-align: right;'></i> 
                         
                         </a>
                  </td>";
+            
 
           echo "</tr>";
         }
         
         ?>
             </table>  
-    
 
 
 
-
-</section>
+    </section> 
 
 
 </main>
