@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    #sidebar {
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      padding-top: 20px;
+      transition: width 0.3s ease;
+    }
+
+    #sidebar a {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      transition: background 0.3s ease;
+    }
+
+    #sidebar a:hover {
+      background-color: #555;
+    }
+
+    #main-content {
+      flex: 1;
+      padding: 20px;
+      transition: margin-left 0.3s ease;
+    }
+
+    #search-bar {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #data-table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    #data-table th,
+    #data-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    #data-table th {
+      background-color: #f2f2f2;
+    }
+
+    #data-table tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    #data-table td.actions {
+      text-align: center;
+    }
+
+    #data-table i {
+      cursor: pointer;
+      color: #3498db;
+    }
+
+    /* Additional Styles for Improved Aesthetics */
+    #sidebar a i {
+      margin-right: 10px;
+    }
+
+    #sidebar a {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    #main-content {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Additional Styles for Modal and Form */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 30px; /* Increased padding for a larger form */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 36%; /* Increased width for a larger form */
+      height: 70%; /* Increased height for a larger form */
+      margin: 0 auto; /* Centering the modal */
+      position: relative; /* Relative positioning for absolute close button */
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #777;
+    }
+
+    .close:hover {
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #267bb8;
+    }
+
+    .open-form-button {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .open-form-button:hover {
+      background-color: #267bb8;
+    } 
+	
+	.success-message {
+      display: none;
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    } 
+	
+  </style>
+</head>
+<body>
+
+<div id="sidebar">
+  <a href="#"><i class="fas fa-home"></i> Reclamation</a>
+  <a href="#"><i class="fas fa-chart-bar"></i> Reorder</a>
+  <a href="#"><i class="fas fa-cog"></i> Catalog</a>
+</div>
+
+
+
+<!-- JavaScript to handle showing and hiding the user form modal -->
+<script>
+  function openUserForm() {
+    document.getElementById('user-form-modal').style.display = 'flex';
+  }
+
+  function closeUserFormModal() {
+    document.getElementById('user-form-modal').style.display = 'none';
+  } 
+  
+  function submitForm(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Your form submission logic here...
+
+      // Display success message
+      document.getElementById('success-message').style.display = 'block';
+
+      // Optionally, you can reset the form after submission
+      document.getElementById('user-form').reset();
+    }
+</script>
+
+</body>
+</html>
