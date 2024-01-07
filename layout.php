@@ -115,11 +115,11 @@
 
     .modal-content {
       background-color: #fff;
-      padding: 30px; /* Increased padding for a larger form */
+      padding: 20px; /* Increased padding for a larger form */
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       width: 36%; /* Increased width for a larger form */
-      height: 70%; /* Increased height for a larger form */
+      height: 80%; /* Increased height for a larger form */
       margin: 0 auto; /* Centering the modal */
       position: relative; /* Relative positioning for absolute close button */
     }
@@ -148,7 +148,7 @@
       color: #333;
     }
 
-    input {
+    input, select, textarea {
       padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
