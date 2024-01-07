@@ -130,11 +130,11 @@
   }
   
   li a.active {
-    /* background-color: #68c4af;  */
+    background-color: #68c4af;  
     color: #fff; 
     border-radius: 15px;  
     /* background-color: #7071E8 */ 
-    background-color: #39A7FF;  
+   /*  background-color: #39A7FF;   */
     width: 80%
    
     
@@ -142,9 +142,9 @@
   }
   
   li a:hover:not(.active) {
-    /* background-color: #68c4af; */
+    background-color: #68c4af;
     color: white; 
-    background-color: #39A7FF; 
+   /*  background-color: #39A7FF;  */
     border-radius: 15px; 
     width: 80%  
 
@@ -169,12 +169,12 @@
         } 
 
         legend { 
-            /* background-color: #68c4af;  */
+            background-color: #68c4af; 
             color: #fff; 
             padding: 3px 6px; 
             border-radius: 15px; 
             /* background-color: #7071E8 */ 
-            background-color:#39A7FF
+            /*background-color:#39A7FF */ 
         }
 
         label {
@@ -261,7 +261,7 @@
             <li><a href="prod_ns_read.php"> Not suitble</a></li>
             <li><a href=""> Reclamation</a></li>
             <li><a href="printing_read.php"><i class="fa-solid fa-print"></i> Printing protocol</a></li> 
-            <li><a href=""><i class="fa-solid fa-paint-roller"></i>  Finishing protocol</a></li> 
+            <li><a href="finishing_read.php"><i class="fa-solid fa-paint-roller"></i>  Finishing protocol</a></li> 
             <li><a href=""><i class="fa-solid fa-teeth"></i> Finished</a></li>
             
             <!-- Finance nav -->

@@ -40,6 +40,17 @@ include('layout.php');
             <label for="order_number"> Order Number:</label> 
             <input id="order_number" type="text" name="order_number"> 
             
+            <label for="jaw_color">Jaw/Color: </label> 
+                <select name="jaw_color" id="jaw_color"> 
+                    <option value="">--Select--</option>
+                    <option value="TN">TN</option> 
+                    <option value="TH">TH</option> 
+                    <option value="BN">BN</option>
+                    <option value="BH">BH</option> 
+                    <option value="PN">PN</option> 
+                    <option value="PH">PH</option> 
+                </select> 
+                                    
             <label for="issue">Reason:</label>  
                 <select name="issue" id="issue"> 
                     <option value="">--Select--</option>
@@ -53,21 +64,7 @@ include('layout.php');
 
                 <label for="issue_date"> Date of request:</label>
                 <input type="date" class="issue_date" name="issue_date">
-              
-            <label for="jaw_color">Jaw/Color: </label> 
-                <select name="jaw_color" id="jaw_color"> 
-                    <option value="">--Select--</option>
-                    <option value="TN">TN</option> 
-                    <option value="BN">BN</option> 
-                    <option value="TH">TH</option> 
-                    <option value="BH">BH</option> 
-                    <option value="PN">PN</option> 
-                    <option value="PH">PH</option> 
-                </select> 
-                    
-                
-            
-            
+                         
         </fieldset> 
 
         <fieldset> 
@@ -75,7 +72,10 @@ include('layout.php');
             <label for="">Action</label> 
             <select name="" id=""> 
                 <option value="">Send IBS set</option> 
-                <option value="">Send new IS </option>
+                <option value="">Send 2x IS </option> 
+                <option value="">Send 4x IS </option> 
+                <option value="">Send 6x IS </option> 
+                <option value="">Send 8x IS </option>
             </select>
         </fieldset> 
 
