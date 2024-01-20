@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
-  <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link href="/resources/demos/style.css">
   
   <style>
@@ -231,7 +231,14 @@
 
     #filter-dropdown-icon {
       margin-left: 8px;
-    }
+    }  
+
+    .popup { 
+		width: 500px; 
+		padding: 20px; 
+		background: #fff
+		}
+
 	
   </style>
 </head>
@@ -247,8 +254,7 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+
 <!-- JavaScript to handle showing and hiding the user form modal -->
 <script>
   function openUserForm() {
@@ -272,13 +278,18 @@
   
      
     
-    } 
+    }  
+
+
+    
 
  
 </script> 
 
 
-<script type="text/javascript" src="script.js" ></script>
+
+
+
 
 
 
